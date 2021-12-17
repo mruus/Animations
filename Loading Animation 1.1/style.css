@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: poppins;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: #036822;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+p {
+  font-size: 12px;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+p span {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: green;
+}
+
+.rect {
+  margin-top: 40px;
+  width: 440px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.rect .bar {
+  width: 440px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 30px solid #9dffba;
+}
+
+.rect .ball {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #036822;
+  left: 0;
+  top: 0;
+  animation: ball 4s ease infinite;
+}
+
+@keyframes ball {
+  0% {
+    transform: translateX(0px);
+  }
+
+  25% {
+    transform: translateX(410px);
+  }
+
+  50% {
+    transform: translateY(220px) translateX(410px);
+  }
+
+  75% {
+    transform: translateX(0) translateY(220px);
+  }
+
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}

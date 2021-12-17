@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: poppins;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: #036822;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+p {
+  font-size: 12px;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+p span {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: green;
+}
+
+.loader {
+  position: relative;
+  margin-top: 50px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader .center {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 40px solid #f0f0f0;
+}
+
+.loader .dot {
+  position: absolute;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background-color: #036822;
+  border-radius: 50%;
+  top: 50%;
+  transform-origin: 100px 50%;
+  transform: translateY(-50%);
+  animation: animDot 4s linear infinite;
+}
+
+@keyframes animDot {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
