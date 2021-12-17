@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: poppins;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: #036822;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+p {
+  font-size: 12px;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+p span {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: green;
+}
+
+.rect {
+  margin-top: 40px;
+  width: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.rect .bar {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 50%;
+  border: 40px solid #9dffba;
+  margin: 0 -20px;
+}
+
+.rect .ball {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #036822;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transform-origin: 100px 50%;
+  animation: animDot 4s linear infinite;
+}
+
+@keyframes animDot {
+  0% {
+    transform-origin: 100px 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  50% {
+    transform-origin: 100px 50%;
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+
+  50.1% {
+    transform-origin: -60px 50%;
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+
+  100% {
+    transform-origin: -60px 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
