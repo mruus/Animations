@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: poppins;
+  min-height: 100vh;
+  flex-direction: column;
+  background: radial-gradient(rgb(3, 104, 34, 0.6), rgb(3, 104, 34, 0.9));
+}
+
+h1 {
+  text-transform: uppercase;
+  color: #036822;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+p {
+  font-size: 12px;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+p span {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: green;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  margin-top: 80px;
+  perspective: 1500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.cube {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: cubicRotate 10s linear infinite;
+}
+
+@keyframes cubicRotate {
+  0% {
+    transform: rotate3d(0, 0, 0, 0);
+  }
+  100% {
+    transform: rotate3d(1, 1, 1, 360deg);
+  }
+}
+
+.item_1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(3, 104, 34, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  font-family: poppins;
+  font-weight: bold;
+  color: white;
+}
+
+.item_2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(3, 104, 34, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-family: poppins;
+  font-weight: bold;
+  color: white;
+  border: 1px solid white;
+}
+
+.one {
+  transform: scale3d(0.5, 0.5, 0.5) rotateY(-90deg) translateZ(100px);
+}
+
+.two {
+  transform: scale3d(0.5, 0.5, 0.5) translateZ(100px);
+}
+
+.three {
+  transform: scale3d(0.5, 0.5, 0.5) rotateY(90deg) translateZ(100px);
+}
+
+.four {
+  transform: scale3d(0.5, 0.5, 0.5) translateZ(-100px);
+}
+
+.five {
+  transform: scale3d(0.5, 0.5, 0.5) rotateX(90deg) translateZ(100px);
+}
+
+.six {
+  transform: scale3d(0.5, 0.5, 0.5) rotateX(-90deg) translateZ(100px);
+}
+/* -------------------------- */
+.seven {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+
+.eight {
+  transform: translateZ(100px);
+}
+
+.nine {
+  transform: rotateY(90deg) translateZ(100px);
+}
+
+.ten {
+  transform: translateZ(-100px);
+}
+
+.eleven {
+  transform: rotateX(90deg) translateZ(100px);
+}
+
+.twelve {
+  transform: rotateX(-90deg) translateZ(100px);
+}
